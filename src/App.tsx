@@ -30,8 +30,8 @@ function App() {
         localStorage.setItem("score", JSON.stringify(score + 1));
         setResult(res);
         setDisable(false);
-      }, 2000);
-    }, 3000);
+      }, 1000);
+    }, 2000);
   }
 
   useEffect(() => {

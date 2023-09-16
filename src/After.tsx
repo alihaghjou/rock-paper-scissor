@@ -41,12 +41,14 @@ export default function After({
         <h2 className="uppercase">You picked</h2>
         <img src={userImage} className="w-24"/>
       </div>{" "}
-      <div className="flex flex-col">
+      {result && (
+        <div className="flex flex-col">
         <div className="text-center uppercase text-3xl">You {result}</div>
         <button className="bg-white text-black rounded py-1" disabled={disable} onClick={() => setPlayState(true)}>
           Play Again
         </button>
       </div>
+        )}
       <div className="flex flex-col items-center justify-center">
         <h2 className="uppercase">the House picked</h2>
         <img className="w-24" src={houseImage} />
