@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 
 type choice = "rock" | "paper" | "scisser";
 
@@ -8,8 +8,7 @@ function random(user: choice): choice {
   const copy = [...choiceArray];
   const index = copy.indexOf(user);
   if (index > -1) {
-    // only splice array when item is found
-    copy.splice(index, 1); // 2nd parameter means remove one item only
+    copy.splice(index, 1);
   }
   return copy[Math.floor(Math.random() * 2)];
 }
@@ -32,12 +31,13 @@ function play(user: choice, house: choice) {
 }
 
 function App() {
+  const [score, setScore] = useState(0)
   const [playState, setPlayState] = useState(true);
   const [result, setResult] = useState("");
   const [house, setHouse] = useState<choice | "">("");
   const [user, setUser] = useState<choice | "">("");
   const [disable, setDisable] = useState(true);
-  function handleClick(name: choice) {
+  function handleUserChoice(name: choice) {
     setResult("");
     setHouse("");
     setPlayState(false);
@@ -48,6 +48,7 @@ function App() {
       const res = play(name, s);
       setTimeout(() => {
         if (!res) return;
+        if (res === "win") setScore(prev => prev+1)
         setResult(res);
         setDisable(false);
       }, 2000);
@@ -56,11 +57,12 @@ function App() {
 
   return (
     <main>
+      {score}
       {playState && (
         <>
-          <button onClick={() => handleClick("rock")}>Rock</button>
-          <button onClick={() => handleClick("paper")}>Paper</button>
-          <button onClick={() => handleClick("scisser")}>Scisser</button>
+          <button onClick={() => handleUserChoice("rock")}>Rock</button>
+          <button onClick={() => handleUserChoice("paper")}>Paper</button>
+          <button onClick={() => handleUserChoice("scisser")}>Scisser</button>
         </>
       )}
       {!playState && (
