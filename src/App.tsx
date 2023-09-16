@@ -25,7 +25,6 @@ function App() {
       setTimeout(() => {
         if (!res) return;
         if (res === "win") setScore((prev) => prev + 1);
-        console.log(score);
         localStorage.removeItem("score");
         localStorage.setItem("score", JSON.stringify(score + 1));
         setResult(res);
@@ -45,8 +44,8 @@ function App() {
   }, []);
 
   return (
-    <main className="h-screen bg-gradient-to-r from-[#1f3756] to-[#141539] text-white p-4">
-      <section className="w-2/3 m-auto">
+    <main className="min-h-screen text-white p-4 pb-8">
+      <section className="md:w-2/3 m-auto">
         <Header score={score} />
         {playState && <Play handleUserChoice={handleUserChoice} />}
         {!playState && (
@@ -59,7 +58,7 @@ function App() {
           />
         )}
       </section>
-      <button>Rules</button>
+      <button className="outline outline-[#606e85] float-right rounded p-2 px-4 ">RULES</button>
     </main>
   );
 }
