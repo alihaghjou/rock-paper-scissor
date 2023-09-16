@@ -1,0 +1,29 @@
+import { choice } from "./App";
+
+const choiceArray: choice[] = ["rock", "paper", "scissors"];
+
+export function random(user: choice): choice {
+  const copy = [...choiceArray];
+  const index = copy.indexOf(user);
+  if (index > -1) {
+    copy.splice(index, 1);
+  }
+  return copy[Math.floor(Math.random() * 2)];
+}
+
+export function playGame(user: choice, house: choice) {
+  switch (user) {
+    case "paper":
+      if (house === "scissors") return "lose";
+      if (house === "rock") return "win";
+      break;
+    case "rock":
+      if (house === "scissors") return "win";
+      if (house === "paper") return "lose";
+      break;
+    case "scissors":
+      if (house === "rock") return "lose";
+      if (house === "paper") return "win";
+      break;
+  }
+}
