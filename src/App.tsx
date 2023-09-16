@@ -3,6 +3,7 @@ import Play from "./Play";
 import After from "./After";
 import { playGame, random } from "./functions";
 import Header from "./Header";
+import MyModal from "./Modal";
 
 export type choice = "rock" | "paper" | "scissors";
 
@@ -58,7 +59,7 @@ function App() {
           />
         )}
       </section>
-      <button className="outline outline-[#606e85] float-right rounded p-2 px-4 ">RULES</button>
+      <MyModal />
     </main>
   );
 }
