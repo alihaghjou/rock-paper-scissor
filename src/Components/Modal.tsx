@@ -1,7 +1,7 @@
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
-import CloseIcon from "./assets/images/icon-close.svg";
-import Rules from "./assets/images/image-rules.svg";
+import CloseIcon from "../assets/images/icon-close.svg";
+import Rules from "../assets/images/image-rules.svg";
 
 export default function MyModal() {
   const [isOpen, setIsOpen] = useState(true);

@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import Play from "./Play";
-import After from "./After";
+import Play from "./Components/Play";
+import After from "./Components/After";
 import { playGame, random } from "./functions";
-import Header from "./Header";
-import MyModal from "./Modal";
+import Header from "./Components/Header";
+import MyModal from "./Components/Modal";
 
 export type choice = "rock" | "paper" | "scissors";
 

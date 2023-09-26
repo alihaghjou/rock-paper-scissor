@@ -1,7 +1,7 @@
-import { choice } from "./App";
-import ScissorsImg from "./assets/images/icon-scissors.svg";
-import rockImg from "./assets/images/icon-rock.svg";
-import paperImg from "./assets/images/icon-paper.svg";
+import { choice } from "../App";
+import ScissorsImg from "../assets/images/icon-scissors.svg";
+import rockImg from "../assets/images/icon-rock.svg";
+import paperImg from "../assets/images/icon-paper.svg";
 
 const arr = [
   {
