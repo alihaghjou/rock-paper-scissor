@@ -11,14 +11,23 @@ export default function Play({
   return (
     <article className="bg-triangle h-80 flex flex-col bg-contain bg-no-repeat bg-center justify-between items-center m-auto max-w-sm">
       <div className="flex justify-between w-full -translate-y-3">
-        <button onClick={() => handleUserChoice("rock")} className=" bg-white rounded-full p-4">
+        <button
+          onClick={() => handleUserChoice("rock")}
+          className=" bg-white rounded-full p-4 w-20 h-20"
+        >
           <img src={rockImg} />
         </button>
-        <button onClick={() => handleUserChoice("paper")} className=" bg-white rounded-full p-4">
+        <button
+          onClick={() => handleUserChoice("paper")}
+          className=" bg-white rounded-full p-4 w-20 h-20"
+        >
           <img src={paperImg} />
         </button>
       </div>
-      <button onClick={() => handleUserChoice("scissors")} className=" bg-white rounded-full p-4">
+      <button
+        onClick={() => handleUserChoice("scissors")}
+        className=" bg-white rounded-full p-4 w-20 h-20"
+      >
         <img src={ScissorsImg} />
       </button>
     </article>

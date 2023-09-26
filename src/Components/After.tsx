@@ -39,7 +39,7 @@ export default function After({
     <article className="flex justify-between items-center">
       <div className="flex flex-col items-center justify-center">
         <h2 className="uppercase">You picked</h2>
-        <img src={userImage} className="w-24"/>
+        <img src={userImage} className="w-28 h-28 bg-white rounded-full p-4"/>
       </div>{" "}
       {result && (
         <div className="flex flex-col">
@@ -51,7 +51,7 @@ export default function After({
         )}
       <div className="flex flex-col items-center justify-center">
         <h2 className="uppercase">the House picked</h2>
-        <img className="w-24" src={houseImage} />
+        <img className="w-28 h-28 bg-white rounded-full p-4" src={houseImage} />
       </div>
     </article>
   );
