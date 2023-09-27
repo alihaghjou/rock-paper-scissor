@@ -1,20 +1,20 @@
 import { choice } from "../App";
-import ScissorsImg from "../assets/images/icon-scissors.svg";
-import rockImg from "../assets/images/icon-rock.svg";
-import paperImg from "../assets/images/icon-paper.svg";
+import ScissorImage from "./Images/ScissorImage";
+import RockImage from "./Images/RockImage";
+import PaperImage from "./Images/PaperImage";
 
 const arr = [
   {
     name: "scissors",
-    image: ScissorsImg,
+    image: <ScissorImage />,
   },
   {
     name: "rock",
-    image: rockImg,
+    image: <RockImage />,
   },
   {
     name: "paper",
-    image: paperImg,
+    image: <PaperImage />,
   },
 ];
 
@@ -39,7 +39,7 @@ export default function After({
     <article className="flex justify-between items-center">
       <div className="flex flex-col items-center justify-center">
         <h2 className="uppercase">You picked</h2>
-        <img src={userImage} className="w-28 h-28 bg-white rounded-full p-4" />
+        {userImage}
       </div>{" "}
       {result && (
         <div className="flex flex-col animate-in">
@@ -58,10 +58,7 @@ export default function After({
         {!house ? (
           <p className="animate-pulse">Selecting...</p>
         ) : (
-          <img
-            className="w-28 h-28 bg-white rounded-full p-4 animate-in"
-            src={houseImage}
-          />
+          <span className="animate-in">{houseImage}</span>
         )}
       </div>
     </article>

@@ -3,21 +3,38 @@
 @tailwind utilities;
 
 body {
-  @apply bg-gradient-to-b from-[#1f3756] to-[#141539] p-4;
+  @apply bg-gradient-to-b from-[#1f3756] to-[#141539] h-screen;
+}
+
+.scissorBorder {
+  background: linear-gradient(white, white) padding-box,
+    linear-gradient(to bottom, hsl(39, 89%, 49%), hsl(40, 84%, 53%)) border-box;
+  border: 10px solid transparent;
+}
+.rockBorder {
+  background: linear-gradient(white, white) padding-box,
+    linear-gradient(to bottom, hsl(349, 71%, 52%), hsl(349, 70%, 56%))
+      border-box;
+  border: 10px solid transparent;
+}
+.paperBorder {
+  background: linear-gradient(white, white) padding-box,
+    linear-gradient(to bottom, hsl(230, 89%, 62%), hsl(230, 89%, 65%))
+      border-box;
+  border: 10px solid transparent;
 }
 
 .animate-in {
-    animation: animateIn 0.3s ease 0.15s both;
+  animation: animateIn 0.3s ease 0.15s both;
+}
+
+@keyframes animateIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
   }
-  
-  @keyframes animateIn {
-    from {
-      opacity: 0;
-      transform: translateY(10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
+}

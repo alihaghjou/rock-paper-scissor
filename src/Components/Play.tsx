@@ -1,7 +1,7 @@
 import type { choice } from "../App";
-import ScissorsImg from "../assets/images/icon-scissors.svg";
-import rockImg from "../assets/images/icon-rock.svg";
-import paperImg from "../assets/images/icon-paper.svg";
+import RockImage from "./Images/RockImage";
+import PaperImage from "./Images/PaperImage";
+import ScissorImage from "./Images/ScissorImage";
 
 export default function Play({
   handleUserChoice,
@@ -13,22 +13,22 @@ export default function Play({
       <div className="flex justify-between w-full -translate-y-3">
         <button
           onClick={() => handleUserChoice("rock")}
-          className=" bg-white rounded-full p-4 w-20 h-20"
+          
         >
-          <img src={rockImg} />
+          <RockImage />
         </button>
         <button
           onClick={() => handleUserChoice("paper")}
-          className=" bg-white rounded-full p-4 w-20 h-20"
+          
         >
-          <img src={paperImg} />
+          <PaperImage />
         </button>
       </div>
       <button
         onClick={() => handleUserChoice("scissors")}
-        className=" bg-white rounded-full p-4 w-20 h-20"
+        
       >
-        <img src={ScissorsImg} />
+        <ScissorImage />
       </button>
     </article>
   );
