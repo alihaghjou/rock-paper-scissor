@@ -39,19 +39,30 @@ export default function After({
     <article className="flex justify-between items-center">
       <div className="flex flex-col items-center justify-center">
         <h2 className="uppercase">You picked</h2>
-        <img src={userImage} className="w-28 h-28 bg-white rounded-full p-4"/>
+        <img src={userImage} className="w-28 h-28 bg-white rounded-full p-4" />
       </div>{" "}
       {result && (
-        <div className="flex flex-col">
-        <div className="text-center uppercase text-3xl">You {result}</div>
-        <button className="bg-white text-black rounded py-1" disabled={disable} onClick={() => setPlayState(true)}>
-          Play Again
-        </button>
-      </div>
-        )}
-      <div className="flex flex-col items-center justify-center">
+        <div className="flex flex-col animate-in">
+          <div className="text-center uppercase text-3xl animate-bounce">You {result}</div>
+          <button
+            className="bg-white text-black rounded py-1"
+            disabled={disable}
+            onClick={() => setPlayState(true)}
+          >
+            Play Again
+          </button>
+        </div>
+      )}
+      <div className="flex flex-col items-center justify-center relative">
         <h2 className="uppercase">the House picked</h2>
-        <img className="w-28 h-28 bg-white rounded-full p-4" src={houseImage} />
+        {!house ? (
+          <p className="animate-pulse">Selecting...</p>
+        ) : (
+          <img
+            className="w-28 h-28 bg-white rounded-full p-4 animate-in"
+            src={houseImage}
+          />
+        )}
       </div>
     </article>
   );
