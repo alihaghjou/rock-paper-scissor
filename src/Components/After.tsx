@@ -6,15 +6,15 @@ import PaperImage from "./Images/PaperImage";
 const arr = [
   {
     name: "scissors",
-    image: <ScissorImage />,
+    image: <ScissorImage big={true} />,
   },
   {
     name: "rock",
-    image: <RockImage />,
+    image: <RockImage big={true} />,
   },
   {
     name: "paper",
-    image: <PaperImage />,
+    image: <PaperImage big={true} />,
   },
 ];
 
@@ -37,7 +37,7 @@ export default function After({
   const houseImage = arr.find((item) => item.name === house)?.image;
   return (
     <article className="flex justify-between items-center">
-      <div className="flex flex-col items-center justify-center">
+      <div className="flex flex-col items-center justify-center gap-6">
         <h2 className="uppercase">You picked</h2>
         {userImage}
       </div>{" "}
@@ -53,8 +53,8 @@ export default function After({
           </button>
         </div>
       )}
-      <div className="flex flex-col items-center justify-center relative">
-        <h2 className="uppercase">the House picked</h2>
+      <div className="flex flex-col items-center justify-center relative gap-6">
+        <h2 className="uppercase text-center">the House picked</h2>
         {!house ? (
           <p className="animate-pulse">Selecting...</p>
         ) : (

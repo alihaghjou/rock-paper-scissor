@@ -15,20 +15,20 @@ export default function Play({
           onClick={() => handleUserChoice("rock")}
           
         >
-          <RockImage />
+          <RockImage big={false} />
         </button>
         <button
           onClick={() => handleUserChoice("paper")}
           
         >
-          <PaperImage />
+          <PaperImage big={false}/>
         </button>
       </div>
       <button
         onClick={() => handleUserChoice("scissors")}
         
       >
-        <ScissorImage />
+        <ScissorImage big={false}/>
       </button>
     </article>
   );
