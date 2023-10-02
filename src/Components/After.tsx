@@ -40,21 +40,21 @@ export default function After({
       <div className="flex gap-2 justify-between w-full">
         <div className="flex flex-col items-center justify-center gap-6">
           <h2 className="uppercase">You picked</h2>
-          {userImage}
+          {result === "win" ? <span className="bg-white bg-opacity-10 rounded-full p-10 transition-all">{userImage}</span> : (<>{userImage}</>)}
         </div>{" "}
         <div className="flex flex-col items-center justify-center relative gap-6">
           <h2 className="uppercase text-center">the House picked</h2>
           {!house ? (
             <p className="animate-pulse">Selecting...</p>
           ) : (
-            <span className="animate-in">{houseImage}</span>
+            result === "lose" ?
+            <span className="animate-in bg-white bg-opacity-10 rounded-full p-10 transition-all">{houseImage}</span> : <span className="animate-in">{houseImage}</span>
           )}
         </div>
       </div>
-
       {result && (
         <div className="flex flex-col animate-in">
-          <div className="text-center uppercase text-3xl animate-bounce">
+          <div className="text-center uppercase text-3xl animate-bounce font-semibold">
             You {result}
           </div>
           <button

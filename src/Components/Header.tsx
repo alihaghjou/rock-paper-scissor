@@ -7,7 +7,7 @@ export default function Header({ score }: { score: number }) {
         <span className="leading-4">SCISSORS</span>
       </h1>
       <span className="flex flex-col justify-center items-center bg-white text-[#2a46c0] rounded p-4">
-        SCORE <span className="text-3xl">{score}</span>
+        SCORE <span className="text-4xl font-semibold text-gray-800">{score}</span>
       </span>
     </header>
   );

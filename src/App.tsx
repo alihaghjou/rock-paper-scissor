@@ -6,7 +6,7 @@ import Header from "./Components/Header";
 import MyModal from "./Components/Modal";
 
 export type choice = "rock" | "paper" | "scissors";
-
+//Todo: do the bonus
 function App() {
   const [score, setScore] = useState(0);
   const [playState, setPlayState] = useState(true);
@@ -26,6 +26,7 @@ function App() {
       setTimeout(() => {
         if (!res) return;
         if (res === "win") setScore((prev) => prev + 1);
+        if (res === "lose") setScore((prev) => prev - 1);
         localStorage.removeItem("score");
         localStorage.setItem("score", JSON.stringify(score + 1));
         setResult(res);
