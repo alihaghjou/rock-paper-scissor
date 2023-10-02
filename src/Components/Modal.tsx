@@ -17,7 +17,7 @@ export default function MyModal() {
   return (
     <>
       <button
-        className="outline outline-[#606e85] float-right rounded p-2 px-4 "
+        className="outline outline-[#606e85] float-right rounded p-2 px-4 md:mr-20"
         onClick={openModal}
       >
         RULES

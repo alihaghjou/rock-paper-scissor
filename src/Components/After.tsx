@@ -36,14 +36,27 @@ export default function After({
   const userImage = arr.find((item) => item.name === user)?.image;
   const houseImage = arr.find((item) => item.name === house)?.image;
   return (
-    <article className="flex justify-between items-center">
-      <div className="flex flex-col items-center justify-center gap-6">
-        <h2 className="uppercase">You picked</h2>
-        {userImage}
-      </div>{" "}
+    <article className="flex justify-between items-center flex-col gap-6">
+      <div className="flex gap-2 justify-between w-full">
+        <div className="flex flex-col items-center justify-center gap-6">
+          <h2 className="uppercase">You picked</h2>
+          {userImage}
+        </div>{" "}
+        <div className="flex flex-col items-center justify-center relative gap-6">
+          <h2 className="uppercase text-center">the House picked</h2>
+          {!house ? (
+            <p className="animate-pulse">Selecting...</p>
+          ) : (
+            <span className="animate-in">{houseImage}</span>
+          )}
+        </div>
+      </div>
+
       {result && (
         <div className="flex flex-col animate-in">
-          <div className="text-center uppercase text-3xl animate-bounce">You {result}</div>
+          <div className="text-center uppercase text-3xl animate-bounce">
+            You {result}
+          </div>
           <button
             className="bg-white text-black rounded py-1"
             disabled={disable}
@@ -53,14 +66,6 @@ export default function After({
           </button>
         </div>
       )}
-      <div className="flex flex-col items-center justify-center relative gap-6">
-        <h2 className="uppercase text-center">the House picked</h2>
-        {!house ? (
-          <p className="animate-pulse">Selecting...</p>
-        ) : (
-          <span className="animate-in">{houseImage}</span>
-        )}
-      </div>
     </article>
   );
 }

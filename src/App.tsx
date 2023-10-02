@@ -46,7 +46,7 @@ function App() {
 
   return (
     <main className="min-h-screen text-white p-4 pb-8">
-      <section className="md:w-2/3 m-auto">
+      <section className="md:w-2/3 m-auto mb-6">
         <Header score={score} />
         {playState && <Play handleUserChoice={handleUserChoice} />}
         {!playState && (
