@@ -7,6 +7,7 @@ import MyModal from "./Components/Modal";
 
 export type choice = "rock" | "paper" | "scissors";
 //Todo: do the bonus
+//todo: fix the background win for mobile
 function App() {
   const [score, setScore] = useState(0);
   const [playState, setPlayState] = useState(true);
@@ -26,7 +27,7 @@ function App() {
       setTimeout(() => {
         if (!res) return;
         if (res === "win") setScore((prev) => prev + 1);
-        if (res === "lose") setScore((prev) => prev - 1);
+        if (res === "lose" && score > 0) setScore((prev) => prev - 1);
         localStorage.removeItem("score");
         localStorage.setItem("score", JSON.stringify(score + 1));
         setResult(res);
