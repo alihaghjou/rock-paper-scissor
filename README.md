@@ -1,27 +1,73 @@
-# React + TypeScript + Vite
+# Frontend Mentor - Rock, Paper, Scissors solution
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a solution to the [Rock, Paper, Scissors challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/rock-paper-scissors-game-pTgwgvgH). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-Currently, two official plugins are available:
+## Table of contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
 
-## Expanding the ESLint configuration
+## Overview
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### The challenge
 
-- Configure the top-level `parserOptions` property like this:
+Users should be able to:
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+- View the optimal layout for the game depending on their device's screen size
+- Play Rock, Paper, Scissors against the computer
+- Maintain the state of the score after refreshing the browser _(optional)_
+- **Bonus**: Play Rock, Paper, Scissors, Lizard, Spock against the computer _(optional)_
+
+### Screenshot
+
+![](./screenshot.jpg)
+
+### Links
+
+- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+
+## My process
+
+### Built with
+
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- CSS Grid
+- [React](https://reactjs.org/) - JS library
+- [TailwindCss](https://tailwindcss.com/) - CSS library
+- [HeadlessUi](https://headlessui.com/) - TailwindCss library
+
+### What I learned
+
+The most interesting and the only thing that i can think of designing border gradient. I learned it just only by googling it.
+
+```css
+.scissorBorder {
+  background: linear-gradient(white, white) padding-box,
+    linear-gradient(to bottom, hsl(39, 89%, 49%), hsl(40, 84%, 53%)) border-box;
+  border: 10px solid transparent;
+}
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### Continued development
+
+I will be needing to improve my css design responsiveness.
+
+### Useful resources
+
+- [resource 1](https://codyhouse.co/nuggets/css-gradient-borders) - This helped me for designing the border gradient. Make sure to check it out.
+
+## Author
+
+- Frontend Mentor - [@alihaghjou](https://www.frontendmentor.io/profile/alihaghjou)
+- Github - [@alihaghjou](https://github.com/alihaghjou)
