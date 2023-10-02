@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Github Code](https://github.com/alihaghjou/rock-paper-scissor)
+- Live Site URL: [Live Solution at Netlify](https://wondrous-pudding-112215.netlify.app/)
 
 ## My process
 
