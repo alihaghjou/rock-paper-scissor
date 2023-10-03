@@ -11,7 +11,7 @@ export default function Play({
   handleUserChoice: (name: choice) => void;
 }) {
   return (
-    <article className="bg-pentagon flex flex-col h-full bg-contain bg-no-repeat bg-center justify-between items-center">
+    <article className="bg-pentagon flex flex-col h-full bg-contain bg-no-repeat bg-center justify-between items-center max-w-md m-auto">
       <button onClick={() => handleUserChoice("rock")} className="-translate-y-5">
         <RockImage width="120px" height="120px" />
       </button>
