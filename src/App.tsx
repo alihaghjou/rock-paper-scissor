@@ -5,7 +5,7 @@ import { playGame, random } from "./functions";
 import Header from "./Components/Header";
 import MyModal from "./Components/Modal";
 
-export type choice = "rock" | "paper" | "scissors";
+export type choice = "rock" | "paper" | "scissors" | "spock" | "lizard";
 //Todo: do the bonus
 //todo: fix the background win for mobile
 function App() {
