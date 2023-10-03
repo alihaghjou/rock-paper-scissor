@@ -57,13 +57,14 @@ export default function MyModal() {
                     <span>RULES</span>
                     <div>
                       <button type="button" onClick={closeModal}>
-                        <img src={CloseIcon} />
+                        <img src={CloseIcon} alt="Close" />
+                        <span className="hidden">Close</span>
                       </button>
                     </div>
                   </Dialog.Title>
                   <div className="md:mt-10 flex justify-center items-center h-full">
                     <center>
-                      <img src={RulesBonus} className="w-96" />
+                      <img src={RulesBonus} className="w-96" alt="Rules" />
                     </center>
                   </div>
                 </Dialog.Panel>
