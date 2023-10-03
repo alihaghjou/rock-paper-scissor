@@ -1,15 +1,11 @@
 import LizardImg from "../../assets/images/icon-lizard.svg"
 
-export default function LizardImage({big}: {big: boolean}) {
+export default function LizardImage({width, height}: {width: string ,height: string}) {
   return (
     <img
       src={LizardImg}
-      style={
-        big
-          ? { width: "180px", height: "180px" }
-          : { width: "128px", height: "128px" }
-      }
-      className="paperBorder bg-white rounded-full p-4"
+      style={{width: width, height: height}}
+      className="lizardBorder bg-white rounded-full p-4"
     />
   )
 }

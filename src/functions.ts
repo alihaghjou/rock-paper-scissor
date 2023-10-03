@@ -1,6 +1,6 @@
 import { choice } from "./App";
 
-const choiceArray: choice[] = ["rock", "paper", "scissors"];
+const choiceArray: choice[] = ["rock", "paper", "scissors", "lizard", "spock"];
 
 export function random(user: choice): choice {
   const copy = [...choiceArray];

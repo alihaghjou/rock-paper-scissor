@@ -1,14 +1,10 @@
 import paperImg from "../../assets/images/icon-paper.svg";
 
-export default function PaperImage({ big }: { big: boolean }) {
+export default function PaperImage({width, height}: {width: string ,height: string}) {
   return (
     <img
       src={paperImg}
-      style={
-        big
-          ? { width: "180px", height: "180px" }
-          : { width: "128px", height: "128px" }
-      }
+      style={{width: width, height: height}}
       className="paperBorder bg-white rounded-full p-4"
     />
   );

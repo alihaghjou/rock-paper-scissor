@@ -2,20 +2,24 @@ import { choice } from "../App";
 import ScissorImage from "./Images/ScissorImage";
 import RockImage from "./Images/RockImage";
 import PaperImage from "./Images/PaperImage";
+import LizardImage from "./Images/LizardImage";
+import SpockImage from "./Images/SpockImage";
 
 const arr = [
   {
     name: "scissors",
-    image: <ScissorImage big={true} />,
+    image: <ScissorImage width="120px" height="120px" />,
   },
   {
     name: "rock",
-    image: <RockImage big={true} />,
+    image: <RockImage width="120px" height="120px" />,
   },
   {
     name: "paper",
-    image: <PaperImage big={true} />,
+    image: <PaperImage width="120px" height="120px" />,
   },
+  { name: "lizard", image: <LizardImage width="120px" height="120px" /> },
+  { name: "spock", image: <SpockImage width="120px" height="120px" /> },
 ];
 
 type propsType = {
@@ -40,15 +44,24 @@ export default function After({
       <div className="flex gap-2 justify-between w-full">
         <div className="flex flex-col items-center justify-center gap-6">
           <h2 className="uppercase">You picked</h2>
-          {result === "win" ? <span className="bg-white bg-opacity-10 rounded-full md:p-10 transition-all">{userImage}</span> : (<>{userImage}</>)}
+          {result === "win" ? (
+            <span className="bg-white bg-opacity-10 rounded-full md:p-10 transition-all">
+              {userImage}
+            </span>
+          ) : (
+            <>{userImage}</>
+          )}
         </div>{" "}
         <div className="flex flex-col items-center justify-center relative gap-6">
           <h2 className="uppercase text-center">the House picked</h2>
           {!house ? (
             <p className="animate-pulse">Selecting...</p>
+          ) : result === "lose" ? (
+            <span className="animate-in bg-white bg-opacity-10 rounded-full md:p-10 transition-all">
+              {houseImage}
+            </span>
           ) : (
-            result === "lose" ?
-            <span className="animate-in bg-white bg-opacity-10 rounded-full md:p-10 transition-all">{houseImage}</span> : <span className="animate-in">{houseImage}</span>
+            <span className="animate-in">{houseImage}</span>
           )}
         </div>
       </div>

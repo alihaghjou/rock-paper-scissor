@@ -23,6 +23,18 @@ body {
       border-box;
   border: 10px solid transparent;
 }
+.lizardBorder {
+  background: linear-gradient(white, white) padding-box,
+    linear-gradient(to bottom, hsl(261, 73%, 60%), hsl(261, 72%, 63%))
+      border-box;
+  border: 10px solid transparent;
+}
+.spockBorder {
+  background: linear-gradient(white, white) padding-box,
+    linear-gradient(to bottom, hsl(189, 59%, 53%), hsl(189, 58%, 57%))
+      border-box;
+  border: 10px solid transparent;
+}
 
 .animate-in {
   animation: animateIn 0.3s ease 0.15s both;

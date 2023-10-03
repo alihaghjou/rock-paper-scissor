@@ -1,15 +1,11 @@
 import SpockImg from "../../assets/images/icon-spock.svg"
 
-export default function SpockImage({big}: {big: boolean}) {
+export default function SpockImage({width, height}: {width: string ,height: string}) {
   return (
     <img
       src={SpockImg}
-      style={
-        big
-          ? { width: "180px", height: "180px" }
-          : { width: "128px", height: "128px" }
-      }
-      className="paperBorder bg-white rounded-full p-4"
+      style={{width: width, height: height}}
+      className="spockBorder bg-white rounded-full p-4 bg-center"
     />
   )
 }

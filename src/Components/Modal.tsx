@@ -1,7 +1,8 @@
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
 import CloseIcon from "../assets/images/icon-close.svg";
-import Rules from "../assets/images/image-rules.svg";
+// import Rules from "../assets/images/image-rules.svg";
+import RulesBonus from "../assets/images/image-rules-bonus.svg";
 
 export default function MyModal() {
   const [isOpen, setIsOpen] = useState(true);
@@ -62,7 +63,7 @@ export default function MyModal() {
                   </Dialog.Title>
                   <div className="md:mt-10 flex justify-center items-center h-full">
                     <center>
-                      <img src={Rules} className="w-96" />
+                      <img src={RulesBonus} className="w-96" />
                     </center>
                   </div>
                 </Dialog.Panel>
