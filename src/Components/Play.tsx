@@ -12,10 +12,10 @@ export default function Play({
 }) {
   return (
     <article className="bg-pentagon flex flex-col h-full bg-contain bg-no-repeat bg-center justify-between items-center">
-      <button onClick={() => handleUserChoice("rock")}>
+      <button onClick={() => handleUserChoice("rock")} className="-translate-y-5">
         <RockImage width="120px" height="120px" />
       </button>
-      <div className="flex justify-between items-center w-full">
+      <div className="flex justify-between items-center w-full -translate-y-5">
         <button onClick={() => handleUserChoice("paper")}>
           <PaperImage width="120px" height="120px" />
         </button>
