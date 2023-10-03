@@ -26,9 +26,12 @@ Users should be able to:
 - Maintain the state of the score after refreshing the browser _(optional)_
 - **Bonus**: Play Rock, Paper, Scissors, Lizard, Spock against the computer _(optional)_
 
+All the bonus parts are done.😮‍💨
+
 ### Screenshot
 
 ![](./screenshot.jpg)
+![](./screenshotbonus.png)
 
 ### Links
 
